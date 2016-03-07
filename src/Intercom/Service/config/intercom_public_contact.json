@@ -5,16 +5,16 @@
         "getContact": {
             "httpMethod": "GET",
             "parameters": {
-                "user_id": {
-                    "location": "query",
-                    "required": false,
+                "id": {
+                    "location": "uri",
+                    "required": true,
                     "type": "string"
                 }
             },
             "responseClass": "ContactModel",
             "responseType": "model",
-            "summary": "Gets contact by user_id",
-            "uri": "/contacts?user_id={user_id}"
+            "summary": "Gets contact by id",
+            "uri": "/contacts/{id}"
         },
         "getContacts": {
             "extends": "_abstract_pagination_page",
